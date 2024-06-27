@@ -51,6 +51,7 @@ exports.book_detail = asyncHandler(async (req, res, next) => {
     BookInstance.find({ book: req.params.id }).exec(),
   ]);
 
+  console.log(item)
   if (book === null) {
     // No results.
     const err = new Error("Book not found");
